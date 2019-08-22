@@ -8,5 +8,10 @@ a {
 }
 
 nav {
-  background-color: lightgray;
+  background-color: rgb(30, 88, 247);
+  font-size: 27px;
+  padding: 5px;
+  text-align: center;
+  align-content: center;
+
 }
