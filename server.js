@@ -32,11 +32,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Uncomment this when adding passport
-// app.use(session({
-//   secret: 'Wheee',
-//   resave: false,
-//   saveUninitialized: true
-// }));
+app.use(session({
+  secret: 'Wheee',
+  resave: false,
+  saveUninitialized: true
+}));
 // app.use(passport.initialize());
 // app.use(passport.session());
 
