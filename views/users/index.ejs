@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+
+
+<div>
+List of users:
+<ul>
+<% users.forEach(function(user) { %>
+<%= user.name %>
+<br>
+<% }); %>
+</ul>
+</div>
+
+
+<%- include('../partials/footer') %>
