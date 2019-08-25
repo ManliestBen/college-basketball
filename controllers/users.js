@@ -26,7 +26,7 @@ res.render('users/index', { users, user:req.user, name: req.query.name, sortKey 
   }
 
 function newTeam(req, res) {
-    res.render('users/newteam', {user:req.user, teamData: 'Hello'});
+    res.render('users/newteam', {user:req.user, teamData: ['']});
 }
 
 function newPlayer(req, res) {
@@ -39,7 +39,7 @@ function teamList(req, res){
     };
     console.log('requesting data from API');
     request(apiLink, function(err, response, body) {
-        var teamData = JSON.parse(body);
+        var teamData = JSON.parse(body).games;
         console.log(teamData);
         res.render('users/newteam', {user:req.user, teamData});
        

@@ -17,9 +17,18 @@ ZOMGNEWTEAM
         </form>
 
         <div>
-        <%- JSON.stringify(teamData); %>
+        <% %>
+        <% teamData.forEach(function(x) { %>
+        <br>
+        <%= x.id; %>
         <% %>
         <% %>
+        <% %>
+        <% %>
+        <% %>
+        <% %>
+        <% %>
+        <% }); %>
 </div>
 
 <%- include('../partials/footer') %>
