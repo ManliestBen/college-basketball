@@ -3,6 +3,8 @@ var usersCtrl = require('../controllers/users');
 
 
 router.get('/users', usersCtrl.index);
+router.get('/users/newteam', usersCtrl.newTeam);
+router.get('/users/newplayer', usersCtrl.newPlayer);
 
 
 

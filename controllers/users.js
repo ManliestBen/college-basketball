@@ -1,7 +1,10 @@
 const User = require('../models/user');
 
 module.exports = {
-    index
+    index,
+    newTeam,
+    newPlayer
+
 };
 
 
@@ -20,3 +23,11 @@ res.render('users/index', { users, user:req.user, name: req.query.name, sortKey 
 });
 
   }
+
+function newTeam(req, res) {
+    res.render('users/newteam', {user:req.user});
+}
+
+function newPlayer(req, res) {
+    res.render('users/newplayer', {user:req.user});
+}
