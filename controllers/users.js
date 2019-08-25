@@ -26,7 +26,7 @@ res.render('users/index', { users, user:req.user, name: req.query.name, sortKey 
   }
 
 function newTeam(req, res) {
-    res.render('users/newteam', {user:req.user});
+    res.render('users/newteam', {user:req.user, teamData: 'Hello'});
 }
 
 function newPlayer(req, res) {

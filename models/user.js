@@ -14,8 +14,7 @@ var userSchema = new mongoose.Schema({
     email: String,
     googleId: String,
     faveTeam: [faveTeamSchema],
-    favePlayer: [favePlayerSchema],
-    teamData: String
+    favePlayer: [favePlayerSchema]
 }, {
     timestamps: true
 });
