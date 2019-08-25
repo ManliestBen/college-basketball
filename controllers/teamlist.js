@@ -1,4 +1,5 @@
 var request = require('request');
+var express = require('express');
 
 module.exports = {
     teamList
@@ -12,6 +13,7 @@ function teamList(req, res){
     request(apiLink, function(err, response, body) {
         var teamData = JSON.parse(body);
         console.log(teamData);
-        res.render('users/newteam', {user:req.user})
+        res.render('users/newteam', {user:req.user});
+       
     })
 }
