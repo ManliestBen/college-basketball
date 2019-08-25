@@ -1,6 +1,7 @@
 
 var router = require('express').Router();
 var passport = require('passport');
+var request = require('request');
 
 // renders view for home page
 router.get('/', function(req, res, next) {
