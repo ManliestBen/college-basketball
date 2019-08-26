@@ -1,6 +1,17 @@
 <%- include('../partials/header') %>
 
+<div>
+<h2>Team Info</h2>
+<% if (users.faveteams.length) { %>
+<% users.faveteams.forEach(function(x) { %>
+<br>
 
+<%= x.faveteams %>
+<a href="/teams/:id">View Team</a>
+
+<% })}; %>
+
+</div>
 
 <form action="/users/<%= user._id %>/faveteams" method="POST">
 
