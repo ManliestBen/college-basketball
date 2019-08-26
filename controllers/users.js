@@ -3,7 +3,6 @@ var request = require('request');
 module.exports = {
     index,
     newTeam,
-    newPlayer,
     show
     // createTeam
 
@@ -42,9 +41,7 @@ function newTeam(req, res) {
 
 }
 
-function newPlayer(req, res) {
-    res.render('users/newplayer', {user:req.user});
-}
+
 
 // function createTeam(req, res) {
 //     var team = new User(req.body);

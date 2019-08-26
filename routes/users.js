@@ -5,7 +5,6 @@ var request = require('request');
 
 router.get('/users', usersCtrl.index);
 router.get('/users/faveteams', usersCtrl.newTeam);
-router.get('/users/newplayer', usersCtrl.newPlayer);
 router.get('/users/:id', usersCtrl.show);
 
 
