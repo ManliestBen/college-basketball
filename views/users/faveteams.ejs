@@ -5,7 +5,7 @@
 ZOMGNEWTEAM
 </div>
 
-<form action="/users/newteam" method="POST">
+<form action="/users/<%= user._id %>/faveteams" method="POST">
 
 <select name="faveTeam" id="faveTeam" onChange="changeconf(this.value);">
 <option value="" disabled selected>Select</option>

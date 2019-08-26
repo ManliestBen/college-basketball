@@ -4,9 +4,10 @@ var request = require('request');
 
 
 router.get('/users', usersCtrl.index);
-router.get('/users/newteam', usersCtrl.newTeam);
+router.get('/users/faveteams', usersCtrl.newTeam);
 router.get('/users/newplayer', usersCtrl.newPlayer);
-router.post('/users/newteam', usersCtrl.newTeam)
+router.get('/users/:id', usersCtrl.show);
+
 
 
 

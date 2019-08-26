@@ -6,6 +6,7 @@ List of users:
 <ul>
 <% users.forEach(function(user) { %>
 <%= user.name %>
+<a href="/users/<%= user._id %>">Show</a>
 <br>
 <% }); %>
 </ul>
