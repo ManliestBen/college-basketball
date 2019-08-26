@@ -1,9 +1,9 @@
 var teamsByConference = {
-    A: ["BC", "CLEM", "DUKE", "FSU", "GT", "LOU", "MIA", "UNC", "NCST", "PITT", "SYR", "UVA", "VT", "WAKE"],
-    B: ["ILL", "IND", "IOWA", "MD", "MICH", "MSU", "MINN", "NEB", "NW", "OSU", "PSU", "PUR", "RUTG", "WIS"],
-    C: ["BAY", "ISU", "KU", "KSU", "OKLA", "OKST", "TCU", "TEX", "TTU", "WVU"],
-    D: ["ARIZ", "ASU", "CAL", "UCLA", "COLO", "ORE", "ORST", "USC", "STAN", "UTAH", "WASH", "WSU"],
-    E: ["ALA", "ARK", "AUB", "FLA", "UGA", "UK", "LSU", "MISS", "MSST", "MIZZ", "SCAR", "TENN", "TXAM", "VAN"]
+    A: ["Select Below", "BC", "CLEM", "DUKE", "FSU", "GT", "LOU", "MIA", "UNC", "NCST", "PITT", "SYR", "UVA", "VT", "WAKE"],
+    B: ["Select Below", "ILL", "IND", "IOWA", "MD", "MICH", "MSU", "MINN", "NEB", "NW", "OSU", "PSU", "PUR", "RUTG", "WIS"],
+    C: ["Select Below", "BAY", "ISU", "KU", "KSU", "OKLA", "OKST", "TCU", "TEX", "TTU", "WVU"],
+    D: ["Select Below", "ARIZ", "ASU", "CAL", "UCLA", "COLO", "ORE", "ORST", "USC", "STAN", "UTAH", "WASH", "WSU"],
+    E: ["Select Below", "ALA", "ARK", "AUB", "FLA", "UGA", "UK", "LSU", "MISS", "MSST", "MIZZ", "SCAR", "TENN", "TXAM", "VAN"]
     }
    
     
