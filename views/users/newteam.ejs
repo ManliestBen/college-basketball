@@ -31,4 +31,17 @@ ZOMGNEWTEAM
         <% }); %>
 </div>
 
+<select name="meal" id="meal" onChange="changecat(this.value);">
+    <option value="" disabled selected>Select</option>
+    <option value="A">Big 12</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+</select>
+<select name="category" id="category">
+    <option value="" disabled selected>Select</option>
+</select>
+<div>
+
+</div>
+
 <%- include('../partials/footer') %>
