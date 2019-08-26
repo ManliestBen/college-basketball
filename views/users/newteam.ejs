@@ -5,33 +5,9 @@
 ZOMGNEWTEAM
 </div>
 
+<form action="/users/newteam" method="POST">
 
-        <form action="/users/newteam" method="POST">
-          <div class="input-group">
-           
-            <span class="input-group-btn">
-              <button class="btn btn-success"
-                type="submit">Get Teams</button>
-            </span>
-          </div>
-        </form>
-
-        <div>
-        <% %>
-        <% teamData.forEach(function(x) { %>
-        <br>
-        <%= x.id; %>
-        <% %>
-        <% %>
-        <% %>
-        <% %>
-        <% %>
-        <% %>
-        <% %>
-        <% }); %>
-</div>
-
-<select name="team" id="team" onChange="changeconf(this.value);">
+<select name="faveTeam" id="faveTeam" onChange="changeconf(this.value);">
 <option value="" disabled selected>Select</option>
 <option value="A">ACC</option>
 <option value="B">Big Ten</option>
@@ -42,6 +18,9 @@ ZOMGNEWTEAM
 <select name="category" id="category">
 <option value="" disabled selected>Select</option>
 </select>
+<button class="btn btn-success"
+                type="submit">Add Team</button>
+</form>
 <div>
 
 </div>

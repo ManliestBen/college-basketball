@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var faveTeamSchema = new mongoose.Schema({
-    teamName: String,
+    team: String,
 });
 
 var favePlayerSchema = new mongoose.Schema({
@@ -14,7 +14,7 @@ var userSchema = new mongoose.Schema({
     email: String,
     googleId: String,
     faveTeam: [faveTeamSchema],
-    favePlayer: [favePlayerSchema]
+    
 }, {
     timestamps: true
 });

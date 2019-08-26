@@ -4,7 +4,7 @@ module.exports = {
     index,
     newTeam,
     newPlayer, 
-    teamList
+    // createTeam
 
 };
 
@@ -26,22 +26,19 @@ res.render('users/index', { users, user:req.user, name: req.query.name, sortKey 
   }
 
 function newTeam(req, res) {
+    console.log(req.user.id);
     res.render('users/newteam', {user:req.user, teamData: ['']});
+
 }
 
 function newPlayer(req, res) {
     res.render('users/newplayer', {user:req.user});
 }
 
-function teamList(req, res){
-    var apiLink = {
-        url: 'https://api.sportradar.us/ncaawb-t3/games/2018/REG/schedule.json?api_key=' + process.env.NCAAWB_TOKEN
-    };
-    console.log('requesting data from API');
-    request(apiLink, function(err, response, body) {
-        var teamData = JSON.parse(body).games;
-        console.log(teamData);
-        res.render('users/newteam', {user:req.user, teamData});
-       
-    })
-}
+// function createTeam(req, res) {
+//     var team = new User(req.body);
+//     team.save(function(err) {
+//         if (err) return res.redirect('/users/newteam');
+//         res.redirect('/users');
+//     })
+// }
