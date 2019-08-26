@@ -1,12 +1,12 @@
 <%- include('../partials/header') %>
 
 
-<div>
+<%# <div>
 ZOMGNEWTEAM
-</div>
+</div> %>
 
 <form action="/users/<%= user._id %>/faveteams" method="POST">
-
+<%# 
 <select name="faveteam" id="faveteam" onChange="changeconf(this.value);">
 <option value="" disabled selected>Select</option>
 <option value="A">ACC</option>
@@ -15,14 +15,19 @@ ZOMGNEWTEAM
 <option value="D">Pac 12</option>
 <option value="E">SEC</option>
 </select>
+
 <select name="category" id="category">
 <option value="" disabled selected>Select</option>
 </select>
+
+
 <button class="btn btn-success"
                 type="submit">Add Team</button>
+
+
 </form>
 <div>
 
-</div>
+</div> %>
 
 <%- include('../partials/footer') %>

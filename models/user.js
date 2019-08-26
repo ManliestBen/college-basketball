@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 
 var faveTeamSchema = new mongoose.Schema({
     faveteams: String,
+    teamId: String
 });
 
 // var favePlayerSchema = new mongoose.Schema({

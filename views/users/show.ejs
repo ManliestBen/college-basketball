@@ -23,11 +23,18 @@
 <option value="D">Pac 12</option>
 <option value="E">SEC</option>
 </select>
-<select name="faveteams" id="faveteams">
+
+
+<select name="faveteams" id="faveteams" onChange="changeid(this.value);">
 <option value="" disabled selected>Select</option>
 </select>
-<button class="btn btn-success"
-                type="submit">Add Team</button>
+
+<select name="teamId" id="teamId">
+<option value="" disabled selected>Select</option>
+</select>
+
+
+<button class="btn btn-success" type="submit">Add Team</button>
 </form>
 <div>
 
