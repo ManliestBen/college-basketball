@@ -1,13 +1,14 @@
 <%- include('../partials/header') %>
 
 <div>
-<h2>Team Info</h2>
+<h2>My Teams:</h2>
 <% if (users.faveteams.length) { %>
 <% users.faveteams.forEach(function(x) { %>
 <br>
 
 <%= x.faveteams %>
-<a href="/teams/:id">View Team</a>
+
+<button href="/teaminfo/<%= x.teamId %>">View Team</button>
 
 <% })}; %>
 

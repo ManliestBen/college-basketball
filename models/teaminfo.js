@@ -1,4 +1,4 @@
-
+var mongoose = require('mongoose');
 
 var playerSchema = new mongoose.Schema({
     playerId: String,
@@ -13,6 +13,7 @@ var playerSchema = new mongoose.Schema({
 });
 
 var teamInfoSchema = new mongoose.Schema({
+    teamId: {type: String},
     market: {type: String},
     name: {type: String},
     founded: {type: Number},

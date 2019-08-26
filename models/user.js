@@ -5,10 +5,6 @@ var faveTeamSchema = new mongoose.Schema({
     teamId: String
 });
 
-// var favePlayerSchema = new mongoose.Schema({
-//     playerName: String
-// });
-
 
 var userSchema = new mongoose.Schema({
     name: {type: String},
