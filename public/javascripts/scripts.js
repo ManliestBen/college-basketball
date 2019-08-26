@@ -7,13 +7,13 @@ var teamsByConference = {
     }
     
     function changeconf(value) {
-    if (value.length == 0) document.getElementById("category").innerHTML = "<option></option>";
+    if (value.length == 0) document.getElementById("faveteams").innerHTML = "<option></option>";
     else {
     var catOptions = "";
     for (categoryId in teamsByConference[value]) {
     catOptions += "<option>" + teamsByConference[value][categoryId] + "</option>";
     }
-    document.getElementById("category").innerHTML = catOptions;
+    document.getElementById("faveteams").innerHTML = catOptions;
     }
     }
     

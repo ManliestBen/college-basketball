@@ -9,7 +9,7 @@ function create(req, res) {
         user.faveteams.push(req.body);
         console.log(req.body);
         user.save(function(err) {
-            res.redirect('/users', users);
+            res.redirect(`/users/${user._id}`);
         });
     });
 }
