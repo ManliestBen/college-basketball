@@ -19,7 +19,12 @@
     <nav>
       <div class="nav-wrapper">
         <a href="/users" class="left">College Basketball</a>
-        <a href="/users/<%= user._id %>">My Teams</a>
+        <% if (user) { %>
+          <a href="/users/<%= user._id %>">My Teams</a>
+        <% } %>
+
+        
+        
         <a href="/users/newplayer">New Player</a>
         <ul class="right">
           <li>
