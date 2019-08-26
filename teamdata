@@ -32,15 +32,16 @@ EJS STUFF:
 
 CONTROLLER STUFF:
 
-function teamList(req, res){
+function teamList(req, res){{}
+  let { teamId } = req.params
     var apiLink = {
         url: 'https://api.sportradar.us/ncaawb-t3/games/2018/REG/schedule.json?api_key=' + process.env.NCAAWB_TOKEN
     };
     console.log('requesting data from API');
     request(apiLink, function(err, response, body) {
-        var teamData = JSON.parse(body).games;
+        var teamData = JSON.parse(body);
         console.log(teamData);
-        res.render('users/newteam', {user:req.user, teamData});
+        res.render('teaminfo/', {user:req.user, teamData});
        
     })
 }

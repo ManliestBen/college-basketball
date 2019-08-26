@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 
 var playerSchema = new mongoose.Schema({
     playerId: String,
-    teamId: String,
     playerName: String,
     playerHeight: Number,
     playerWeight: Number,
