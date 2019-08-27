@@ -2,24 +2,91 @@
 
 <form id="playerform" action="/users/<%= user._id %>/faveplayers" method="POST">
 <h2><%= response.full_name %></h2>
+<h1></h1>
+<h4>Height: <%= response.height %> inches</h4><br>
+<h4>Weight: <%= response.weight %> pounds</h4><br>
+<h4>Position: <%= response.position %></h4><br>
+<h4>Jersey Number: <%= response.jersey_number %></h4>
+<h4>Year: <%= response.experience %></h4>
 
-    <%= response.full_name %>
-    <%= response.height %>
-    <%= response.weight %>
-    <%= response.position %>
-    <%= response.jersey_number %>
-    <%= response.experience %>
 
-    <% response.seasons.forEach(function(id) { %>
-    <br>
-    <%= id.year %>
-        <% id.teams.forEach(function(innerid) { %>
-            <%= innerid.market %>
-            <%= innerid.name %>
-            <%= innerid.total.games_played %>
-        <% }); %>    
-    <% }); %>
 
+<% response.seasons.forEach(function(id) { %>
+    <h3><%= id.year %> Season Stats:</h3>
+    <table>
+        <thead>
+            <tr>
+            <th></th>
+            <th>Team</th>
+            <th>Games Played</th>
+            <th>Games Started</th>
+            <th>Minutes</th>
+            <th>FG<br>Made</th>
+            <th>FG<br>ATT</th>
+            <th>FG<br>PCT</th>
+            <th>2 PT<br>Made</th>
+            <th>2 PT<br>ATT</th>
+            <th>2 PT<br>PCT</th>
+            <th>3 PT<br>Made</th>
+            <th>3 PT<br>ATT</th>
+            <th>3 PT<br>PCT</th>
+            <th>Blocks<br>ATT</th>
+            <th>FT<br>Made</th>
+            <th>FT<br>ATT</th>
+            <th>FT<br>PCT</th>
+            </tr>
+        </thead>
+        <tbody>    
+            <% id.teams.forEach(function(innerid) { %>
+            <tr>
+            <td>Season Total</td>
+            <td><%= innerid.alias %></td>    
+            <td><%= innerid.total.games_played %></td>
+            <td><%= innerid.total.games_started %></td>
+            <td><%= innerid.total.minutes %></td>
+            <td><%= innerid.total.field_goals_made %></td>
+            <td><%= innerid.total.field_goals_att %></td>
+            <td><%= innerid.total.field_goals_pct %></td>
+            <td><%= innerid.total.two_points_made %></td>
+            <td><%= innerid.total.two_points_att %></td>
+            <td><%= innerid.total.two_points_pct %></td>
+            <td><%= innerid.total.three_points_made %></td>
+            <td><%= innerid.total.three_points_att %></td>
+            <td><%= innerid.total.three_points_pct %></td>
+            <td><%= innerid.total.blocked_att %></td>
+            <td><%= innerid.total.free_throws_made %></td>
+            <td><%= innerid.total.free_throws_att %></td>
+            <td><%= innerid.total.free_throws_pct %></td>
+            </tr>
+            <tr>
+            <td>Season Average</td>
+            <td><%= innerid.alias %></td>
+            <td></td>
+            <td></td>
+            <td><%= innerid.average.minutes %></td>
+            <td><%= innerid.average.field_goals_made %></td>
+            <td><%= innerid.average.field_goals_att %></td>
+            <td></td>
+            <td><%= innerid.average.two_points_made %></td>
+            <td><%= innerid.average.two_points_att %></td>
+            <td></td>
+            <td><%= innerid.average.three_points_made %></td>
+            <td><%= innerid.average.three_points_att %></td>
+            <td></td>
+            <td><%= innerid.average.blocked_att %></td>
+            <td><%= innerid.average.free_throws_made %></td>
+            <td><%= innerid.average.free_throws_att %></td>
+            <td></td>
+            </tr>
+            <% }); %>
+        </tbody>    
+        </thead>
+    </table>    
+<% }); %>
+
+
+
+<br>
 <select id="playerIdSubmit" name="playerId"><option value="<%= response.id %>"><%= response.id %></option></select>
 <select id="faveplayersSubmit" name="faveplayers"><option value="<%= response.full_name %>"><%= response.full_name %></option></select>
 <input type='submit' value='Add Player to Favorites'>
