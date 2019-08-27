@@ -1,133 +1,231 @@
 <%- include('../partials/header') %>
 
-
-<div>
-    Team Info:
-    <br>
 <%= response.market %>
 <%= response.name %>
-<%= response.own_record.total.games_played %>
-<%= response.own_record.total.field_goals_made %>
-<%= response.own_record.total.field_goals_att %>
-<%= response.own_record.total.field_goals_pct %>
-<%= response.own_record.total.two_points_made %>
-<%= response.own_record.total.two_points_att %>
-<%= response.own_record.total.two_points_pct %>
-<%= response.own_record.total.three_points_made %>
-<%= response.own_record.total.three_points_att %>
-<%= response.own_record.total.three_points_pct %>
-<%= response.own_record.total.blocked_att %>
-<%= response.own_record.total.free_throws_made %>
-<%= response.own_record.total.free_throws_att %>
-<%= response.own_record.total.free_throws_pct %>
-<%= response.own_record.total.offensive_rebounds %>
-<%= response.own_record.total.defensive_rebounds %>
-<%= response.own_record.total.assists %>
-<%= response.own_record.total.turnovers %>
-<%= response.own_record.total.assists_turnover_ratio %>
-<%= response.own_record.total.steals %>
-<%= response.own_record.total.blocks %>
-<%= response.own_record.total.personal_fouls %>
-<%= response.own_record.total.tech_fouls %>
-<%= response.own_record.total.points %>
-<%= response.own_record.total.fast_break_pts %>
-<%= response.own_record.total.flagrant_fouls %>
-<%= response.own_record.total.points_off_turnovers %>
-<%= response.own_record.total.second_chance_pts %>
-<%= response.own_record.total.ejections %>
-<%= response.own_record.total.foulouts %>
-<%= response.own_record.total.points_in_paint %>
-<%= response.own_record.total.efficiency %>
-<%= response.own_record.total.true_shooting_att %>
-<%= response.own_record.total.true_shooting_pct %>
 
-<%= response.own_record.average.fast_break_pts %>
-<%= response.own_record.average.points_off_turnovers %>
-<%= response.own_record.average.second_chance_pts %>
-<%= response.own_record.average.points %>
-<%= response.own_record.average.off_rebounds %>
-<%= response.own_record.average.def_rebounds %>
-<%= response.own_record.average.rebounds %>
-<%= response.own_record.average.assists %>
-<%= response.own_record.average.steals %>
-<%= response.own_record.average.blocks %>
-<%= response.own_record.average.turnovers %>
-<%= response.own_record.average.personal_fouls %>
-<%= response.own_record.average.flagrant_fouls %>
-<%= response.own_record.average.blocked_att %>
-<%= response.own_record.average.field_goals_made %>
-<%= response.own_record.average.field_goals_att %>
-<%= response.own_record.average.three_points_made %>
-<%= response.own_record.average.three_points_att %>
-<%= response.own_record.average.free_throws_made %>
-<%= response.own_record.average.free_throws_att %>
-<%= response.own_record.average.two_points_made %>
-<%= response.own_record.average.two_points_att %>
-<%= response.own_record.average.points_in_paint %>
-<%= response.own_record.average.efficiency %>
-<%= response.own_record.average.true_shooting_att %>
+<table id="team-total-part1">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Games<br>Played</th>
+            <th>FG<br>Made</th>
+            <th>FG<br>ATT</th>
+            <th>FG<br>PCT</th>
+            <th>2 PT<br>Made</th>
+            <th>2 PT<br>ATT</th>
+            <th>2 PT<br>PCT</th>
+            <th>3 PT<br>Made</th>
+            <th>3 PT<br>ATT</th>
+            <th>3 PT<br>PCT</th>
+            <th>Blocks<br>ATT</th>
+            <th>FT<br>Made</th>
+            <th>FT<br>ATT</th>
+            <th>FT<br>PCT</th>
+            <th>True<br>Shot<br>ATT</th>
+            <th>True<br>Shot<br>PCT</th>
+        </tr>
+    </thead>
+    
+<tbody>
+<tr>
+<td>Team Total</td>
+<td><%= response.own_record.total.games_played %></td>
+<td><%= response.own_record.total.field_goals_made %></td>
+<td><%= response.own_record.total.field_goals_att %></td>
+<td><%= response.own_record.total.field_goals_pct %></td>
+<td><%= response.own_record.total.two_points_made %></td>
+<td><%= response.own_record.total.two_points_att %></td>
+<td><%= response.own_record.total.two_points_pct %></td>
+<td><%= response.own_record.total.three_points_made %></td>
+<td><%= response.own_record.total.three_points_att %></td>
+<td><%= response.own_record.total.three_points_pct %></td>
+<td><%= response.own_record.total.blocked_att %></td>
+<td><%= response.own_record.total.free_throws_made %></td>
+<td><%= response.own_record.total.free_throws_att %></td>
+<td><%= response.own_record.total.free_throws_pct %></td>
+<td><%= response.own_record.total.true_shooting_att %></td>
+<td><%= response.own_record.total.true_shooting_pct %></td>
+</tr>
+<tr>
+<td>Team Average</td>
+<td></td>
+<td><%= response.own_record.average.field_goals_made %></td>
+<td><%= response.own_record.average.field_goals_att %></td>
+<td></td>
+<td><%= response.own_record.average.two_points_made %></td>
+<td><%= response.own_record.average.two_points_att %></td>
+<td></td>
+<td><%= response.own_record.average.three_points_made %></td>
+<td><%= response.own_record.average.three_points_att %></td>
+<td></td>
+<td><%= response.own_record.average.blocked_att %></td>
+<td><%= response.own_record.average.free_throws_made %></td>
+<td><%= response.own_record.average.free_throws_att %></td>
+<td></td>
+<td><%= response.own_record.average.true_shooting_att %></td>
+<td></td>
+</tr>
+<tr>
+<td>Opponent Total</td>
+<td></td>
+<td><%= response.opponents.total.field_goals_made %></td>
+<td><%= response.opponents.total.field_goals_att %></td>
+<td><%= response.opponents.total.field_goals_pct %></td>
+<td><%= response.opponents.total.two_points_made %></td>
+<td><%= response.opponents.total.two_points_att %></td>
+<td><%= response.opponents.total.two_points_pct %></td>
+<td><%= response.opponents.total.three_points_made %></td>
+<td><%= response.opponents.total.three_points_att %></td>
+<td><%= response.opponents.total.three_points_pct %></td>
+<td><%= response.opponents.total.blocked_att %></td>
+<td><%= response.opponents.total.free_throws_made %></td>
+<td><%= response.opponents.total.free_throws_att %></td>
+<td><%= response.opponents.total.free_throws_pct %></td>
+<td><%= response.opponents.total.true_shooting_att %></td>
+<td><%= response.opponents.total.true_shooting_pct %></td>
+</tr>
+<tr>
+<td>Opponent Average</td>
+<td></td>
+<td><%= response.opponents.average.field_goals_made %></td>
+<td><%= response.opponents.average.field_goals_att %></td>
+<td></td>
+<td><%= response.opponents.average.two_points_made %></td>
+<td><%= response.opponents.average.two_points_att %></td>
+<td></td>
+<td><%= response.opponents.average.three_points_made %></td>
+<td><%= response.opponents.average.three_points_att %></td>
+<td></td>
+<td><%= response.opponents.average.blocked_att %></td>
+<td><%= response.opponents.average.free_throws_made %></td>
+<td><%= response.opponents.average.free_throws_att %></td>
+<td></td>
+<td><%= response.opponents.average.true_shooting_att %></td>
+<td></td>
 
-<%= response.opponents.total.field_goals_made %>
-<%= response.opponents.total.field_goals_att %>
-<%= response.opponents.total.field_goals_pct %>
-<%= response.opponents.total.two_points_made %>
-<%= response.opponents.total.two_points_att %>
-<%= response.opponents.total.two_points_pct %>
-<%= response.opponents.total.three_points_made %>
-<%= response.opponents.total.three_points_att %>
-<%= response.opponents.total.three_points_pct %>
-<%= response.opponents.total.blocked_att %>
-<%= response.opponents.total.free_throws_made %>
-<%= response.opponents.total.free_throws_att %>
-<%= response.opponents.total.free_throws_pct %>
-<%= response.opponents.total.offensive_rebounds %>
-<%= response.opponents.total.defensive_rebounds %>
-<%= response.opponents.total.rebounds %>
-<%= response.opponents.total.assists %>
-<%= response.opponents.total.turnovers %>
-<%= response.opponents.total.assists_turnover_ratio %>
-<%= response.opponents.total.steals %>
-<%= response.opponents.total.blocks %>
-<%= response.opponents.total.personal_fouls %>
-<%= response.opponents.total.tech_fouls %>
-<%= response.opponents.total.points %>
-<%= response.opponents.total.fast_break_pts %>
-<%= response.opponents.total.flagrant_fouls %>
-<%= response.opponents.total.points_off_turnovers %>
-<%= response.opponents.total.second_chance_pts %>
-<%= response.opponents.total.ejections %>
-<%= response.opponents.total.foulouts %>
-<%= response.opponents.total.points_in_paint %>
-<%= response.opponents.total.efficiency %>
-<%= response.opponents.total.true_shooting_att %>
-<%= response.opponents.total.true_shooting_pct %>
 
-<%= response.opponents.average.fast_break_pts %>
-<%= response.opponents.average.points_off_turnovers %>
-<%= response.opponents.average.second_chance_pts %>
-<%= response.opponents.average.points %>
-<%= response.opponents.average.off_rebounds %>
-<%= response.opponents.average.def_rebounds %>
-<%= response.opponents.average.rebounds %>
-<%= response.opponents.average.assists %>
-<%= response.opponents.average.steals %>
-<%= response.opponents.average.blocks %>
-<%= response.opponents.average.turnovers %>
-<%= response.opponents.average.personal_fouls %>
-<%= response.opponents.average.flagrant_fouls %>
-<%= response.opponents.average.blocked_att %>
-<%= response.opponents.average.field_goals_made %>
-<%= response.opponents.average.field_goals_att %>
-<%= response.opponents.average.three_points_made %>
-<%= response.opponents.average.three_points_att %>
-<%= response.opponents.average.free_throws_made %>
-<%= response.opponents.average.free_throws_att %>
-<%= response.opponents.average.two_points_made %>
-<%= response.opponents.average.two_points_att %>
-<%= response.opponents.average.points_in_paint %>
-<%= response.opponents.average.efficiency %>
-<%= response.opponents.average.true_shooting_att %>
 
+
+
+
+
+
+
+</tr>
+</tbody>
+</table>
+<br>
+<table id="team-total-part2">
+        <thead>
+            <tr>
+                <th></th>
+                <th>OFF<br>REB</th>
+                <th>DEF<br>REB</th>
+                <th>ASS</th>
+                <th>TO</th>
+                <th>ASS<br>to<br>TO</th>
+                <th>ST</th>
+                <th>BL</th>
+                <th>Pers<br>Fouls</th>
+                <th>Tech<br>Fouls</th>
+                <th>Points</th>
+                <th>Fast<br>Break<br>Points</th>
+                <th>Flag.<br>Fouls</th>
+                <th>Points<br>Off<br>TO</th>
+                <th>2nd<br>Chance<br>Points</th>
+                <th>Ejects</th>
+                <th>Foul<br>Outs</th>
+                <th>PTS<br>in<br>Paint</th>
+                <th>Eff</th>
+            </tr>
+        </thead>
+<tbody>
+<tr>
+<td>Team Total</td>
+<td><%= response.own_record.total.offensive_rebounds %></td>
+<td><%= response.own_record.total.defensive_rebounds %></td>
+<td><%= response.own_record.total.assists %></td>
+<td><%= response.own_record.total.turnovers %></td>
+<td><%= response.own_record.total.assists_turnover_ratio %></td>
+<td><%= response.own_record.total.steals %></td>
+<td><%= response.own_record.total.blocks %></td>
+<td><%= response.own_record.total.personal_fouls %></td>
+<td><%= response.own_record.total.tech_fouls %></td>
+<td><%= response.own_record.total.points %></td>
+<td><%= response.own_record.total.fast_break_pts %></td>
+<td><%= response.own_record.total.flagrant_fouls %></td>
+<td><%= response.own_record.total.points_off_turnovers %></td>
+<td><%= response.own_record.total.second_chance_pts %></td>
+<td><%= response.own_record.total.ejections %></td>
+<td><%= response.own_record.total.foulouts %></td>
+<td><%= response.own_record.total.points_in_paint %></td>
+<td><%= response.own_record.total.efficiency %></td>
+</tr>
+<tr>
+<td>Team Average</td>
+<td><%= response.own_record.average.off_rebounds %></td>
+<td><%= response.own_record.average.def_rebounds %></td>
+<td><%= response.own_record.average.assists %></td>
+<td><%= response.own_record.average.turnovers %></td>
+<td></td>
+<td><%= response.own_record.average.steals %></td>
+<td><%= response.own_record.average.blocks %></td>
+<td><%= response.own_record.average.personal_fouls %></td>
+<td></td>
+<td><%= response.own_record.average.points %></td>
+<td><%= response.own_record.average.fast_break_pts %></td>
+<td><%= response.own_record.average.flagrant_fouls %></td>
+<td><%= response.own_record.average.points_off_turnovers %></td>
+<td><%= response.own_record.average.second_chance_pts %></td>
+<td></td>
+<td></td>
+<td><%= response.own_record.average.points_in_paint %></td>
+<td><%= response.own_record.average.efficiency %></td>
+</tr>
+<tr>
+<td>Opponent Total</td>
+<td><%= response.opponents.total.offensive_rebounds %></td>
+<td><%= response.opponents.total.defensive_rebounds %></td>
+<td><%= response.opponents.total.assists %></td>
+<td><%= response.opponents.total.turnovers %></td>
+<td><%= response.opponents.total.assists_turnover_ratio %></td>
+<td><%= response.opponents.total.steals %></td>
+<td><%= response.opponents.total.blocks %></td>
+<td><%= response.opponents.total.personal_fouls %></td>
+<td><%= response.opponents.total.tech_fouls %></td>
+<td><%= response.opponents.total.points %></td>
+<td><%= response.opponents.total.fast_break_pts %></td>
+<td><%= response.opponents.total.flagrant_fouls %></td>
+<td><%= response.opponents.total.points_off_turnovers %></td>
+<td><%= response.opponents.total.second_chance_pts %></td>
+<td><%= response.opponents.total.ejections %></td>
+<td><%= response.opponents.total.foulouts %></td>
+<td><%= response.opponents.total.points_in_paint %></td>
+<td><%= response.opponents.total.efficiency %></td>
+</tr>
+<tr>
+<td>Opponent Average</td>
+<td><%= response.opponents.average.off_rebounds %></td>
+<td><%= response.opponents.average.def_rebounds %></td>
+<td><%= response.opponents.average.assists %></td>
+<td><%= response.opponents.average.turnovers %></td>
+<td></td>
+<td><%= response.opponents.average.steals %></td>
+<td><%= response.opponents.average.blocks %></td>
+<td><%= response.opponents.average.personal_fouls %></td>
+<td></td>
+<td><%= response.opponents.average.points %></td>
+<td><%= response.opponents.average.fast_break_pts %></td>
+<td><%= response.opponents.average.flagrant_fouls %></td>
+<td><%= response.opponents.average.points_off_turnovers %></td>
+<td><%= response.opponents.average.second_chance_pts %></td>
+<td></td>
+<td></td>
+<td><%= response.opponents.average.points_in_paint %></td>
+<td><%= response.opponents.average.efficiency %></td>
+</tr>
+</tbody>
+</table>
 
 
 <% if (response.players.length) { %>
