@@ -3,11 +3,11 @@
 <form id="playerform" action="/users/<%= user._id %>/faveplayers" method="POST">
 <h2><%= response.full_name %></h2>
 <h1></h1>
-<h4>Height: <%= response.height %> inches</h4><br>
-<h4>Weight: <%= response.weight %> pounds</h4><br>
-<h4>Position: <%= response.position %></h4><br>
-<h4>Jersey Number: <%= response.jersey_number %></h4>
-<h4>Year: <%= response.experience %></h4>
+<h6>Height: <%= response.height %> inches</h6><br>
+<h6>Weight: <%= response.weight %> pounds</h6><br>
+<h6>Position: <%= response.position %></h6><br>
+<h6>Jersey Number: <%= response.jersey_number %></h6>
+<h6>Year: <%= response.experience %></h6>
 
 
 
@@ -81,6 +81,72 @@
             <% }); %>
         </tbody>    
         </thead>
+    </table>
+    <br>
+    <table>
+        <thead>
+            <tr>
+            <th></th>
+            <th>PTS</th>
+            <th>OFF<br>REB</th>
+            <th>DEF<br>REB</th>
+            <th>ASS</th>
+            <th>TO</th>
+            <th>ASS<br>to<br>TO</th>
+            <th>ST</th>
+            <th>BL</th>
+            <th>Pers<br>Fouls</th>
+            <th>Tech<br>Fouls</th>
+            <th>Flag<br>Fouls</th>
+            <th>Ejects</th>
+            <th>Foul<br>Outs</th>
+            <th>True<br>Shot<br>ATT</th>
+            <th>True<br>Shot<br>PCT</th>
+            <th>Eff</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% id.teams.forEach(function(innerid) { %>
+            <tr>
+            <td>Season Total</td>
+            <td><%= innerid.total.points %></td>
+            <td><%= innerid.total.offensive_rebounds %></td>
+            <td><%= innerid.total.defensive_rebounds %></td>
+            <td><%= innerid.total.assists %></td>
+            <td><%= innerid.total.turnovers %></td>
+            <td><%= innerid.total.assists_turnover_ratio %></td>
+            <td><%= innerid.total.steals %></td>
+            <td><%= innerid.total.blocks %></td>
+            <td><%= innerid.total.personal_fouls %></td>
+            <td><%= innerid.total.tech_fouls %></td>
+            <td><%= innerid.total.flagrant_fouls %></td>
+            <td><%= innerid.total.ejections %></td>
+            <td><%= innerid.total.foulouts %></td>
+            <td><%= innerid.total.true_shooting_att %></td>
+            <td><%= innerid.total.true_shooting_pct %></td>
+            <td><%= innerid.total.efficiency %></td>
+            </tr>
+            <tr>
+            <td>Season Average</td>
+            <td><%= innerid.average.points %></td>
+            <td><%= innerid.average.off_rebounds %></td>
+            <td><%= innerid.average.def_rebounds %></td>
+            <td><%= innerid.average.assists %></td>
+            <td><%= innerid.average.turnovers %></td>
+            <td></td>
+            <td><%= innerid.average.steals %></td>
+            <td><%= innerid.average.blocks %></td>
+            <td><%= innerid.average.personal_fouls %></td>
+            <td></td>
+            <td><%= innerid.average.flagrant_fouls %></td>
+            <td></td>
+            <td></td>
+            <td><%= innerid.average.true_shooting_att %></td>
+            <td></td>
+            <td><%= innerid.average.efficiency %></td>
+            </tr>
+            <% }); %>    
+        </tbody>
     </table>    
 <% }); %>
 
