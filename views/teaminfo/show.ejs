@@ -22,17 +22,16 @@
 <% if (response.players.length) { %>
     <% response.players.forEach(function(id) { %>
     <br>
-    <a href="/playerinfo/<%= id.id %>">View Player Stats</a>
     <%= id.full_name %>
-    <%= id.full_name %>
-    <%= id.full_name %>
-    <%= id.full_name %>
+    <a href="/playerinfo/<%= id.id %>">Player Profile</a>
+    
+    <%= id.position %>
+    <%= id.jersey_number %>
+    
     <% })}; %>
 
 
-<%= response.venue.state %>
-<%= response.venue.state %>
-<%= response.venue.state %>
+
 
 </div>
 
