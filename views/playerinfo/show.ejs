@@ -1,12 +1,9 @@
 <%- include('../partials/header') %>
 
 <form id="playerform" action="/users/<%= user._id %>/faveplayers" method="POST">
-<div>
-    Player Info:
-    <br>
-    <%= response.full_name %>
-  
+<h2><%= response.full_name %></h2>
 
+    <%= response.full_name %>
     <%= response.height %>
     <%= response.weight %>
     <%= response.position %>
@@ -22,9 +19,9 @@
             <%= innerid.total.games_played %>
         <% }); %>    
     <% }); %>
-</div>
-<select name="playerId"><option value="<%= response.id %>"><%= response.id %></option></select>
-<select name="faveplayers"><option value="<%= response.full_name %>"><%= response.full_name %></option></select>
+
+<select id="playerIdSubmit" name="playerId"><option value="<%= response.id %>"><%= response.id %></option></select>
+<select id="faveplayersSubmit" name="faveplayers"><option value="<%= response.full_name %>"><%= response.full_name %></option></select>
 <input type='submit' value='Add Player to Favorites'>
 </form>
 

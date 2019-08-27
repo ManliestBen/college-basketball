@@ -23,6 +23,7 @@ select {
   display: inline;
 }
 
-#teamId {
+#teamId, #playerIdSubmit, #faveplayersSubmit {
   display: none;
 }
+
