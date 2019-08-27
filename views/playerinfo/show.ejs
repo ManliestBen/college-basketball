@@ -1,0 +1,31 @@
+<%- include('../partials/header') %>
+
+<form id="playerform" action="/users/<%= user._id %>/faveplayers" method="POST">
+<div>
+    Player Info:
+    <br>
+    <%= response.full_name %>
+    <%= response.team.market %>
+    <%= response.team.name %>
+    <%= response.height %>
+    <%= response.weight %>
+    <%= response.position %>
+    <%= response.jersey_number %>
+    <%= response.experience %>
+
+    <% response.seasons.forEach(function(id) { %>
+    <br>
+    <%= id.year %>
+        <% id.teams.forEach(function(innerid) { %>
+            <%= innerid.market %>
+            <%= innerid.name %>
+            <%= innerid.total.games_played %>
+        <% }); %>    
+    <% }); %>
+</div>
+<select name="playerId"><option value="<%= response.id %>"><%= response.id %></option></select>
+<select name="faveplayers"><option value="<%= response.full_name %>"><%= response.full_name %></option></select>
+<input type='submit' value='Add Player to Favorites'>
+</form>
+
+<%- include('../partials/footer') %>

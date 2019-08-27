@@ -6,8 +6,9 @@ var passport = require('passport');
 
 
 
-router.get('/teaminfo', teamInfoCtrl.index);
+
 router.get('/teaminfo/:id', teamInfoCtrl.show);
+router.get('/playerinfo/:id', teamInfoCtrl.showPlayer);
 
 
 

@@ -38,6 +38,16 @@
 <button class="btn btn-success" type="submit">Add Team</button>
 </form>
 <div>
+<h2>My Players:</h2>
+<% if (users.faveplayers.length) { %>
+<% users.faveplayers.forEach(function(x) { %>
+<br>
+
+<%= x.faveplayers %>
+
+<a href="/playerinfo/<%= x.playerId %>">View Player</a>
+
+<% })}; %>
 
 </div>
 
