@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 
-<%= response.market %>
-<%= response.name %>
+<h1><%= response.market %> <%= response.name %></h1>
 
+<h2>Team Stats:</h2>
 <table id="team-total-part1">
     <thead>
         <tr>
@@ -227,22 +227,49 @@
 </tbody>
 </table>
 
+<table id="playerlist">
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Jersey</th>
+        <th>Minutes</th>
+        <th>Points</th>
+        <th>FG<br>PCT</th>
+        <th>2 PT<br>PCT</th>
+        <th>3 PT<br>PCT</th>
+        <th>OFF<br>REB</th>
+        <th>DEF<br>REB</th>
+        <th>ASS</th>
+        <th>ST</th>
+        <th>BL</th>
+        <th>TO</th>
+        <th></th>
+    </tr>
+</thead>
 
+<h2>Players:</h2>
+<tbody>
 <% if (response.players.length) { %>
     <% response.players.forEach(function(id) { %>
-    <br>
-    <%= id.full_name %>
-    <a href="/playerinfo/<%= id.id %>">Player Profile</a>
-    
-    <%= id.position %>
-    <%= id.jersey_number %>
-    
+    <tr>
+    <td><%= id.full_name %></td>
+    <td><%= id.position %></td>
+    <td><%= id.jersey_number %></td>
+    <td><%= id.average.minutes %></td>
+    <td><%= id.average.points %></td>
+    <td><%= id.total.field_goals_pct %></td>
+    <td><%= id.total.two_points_pct %></td>
+    <td><%= id.total.three_points_pct %></td>
+    <td><%= id.average.off_rebounds %></td>
+    <td><%= id.average.def_rebounds %></td>
+    <td><%= id.average.assists %></td>
+    <td><%= id.average.steals %></td>
+    <td><%= id.average.blocks %></td>
+    <td><%= id.average.turnovers %></td>
+    <td><a href="/playerinfo/<%= id.id %>">Player Profile</a></td>
+    </tr>
     <% })}; %>
-
-
-
-
-</div>
-
-
+</tbody>
+</table>
 <%- include('../partials/footer') %>
