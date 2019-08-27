@@ -6,18 +6,7 @@
     <br>
 <%= response.market %>
 <%= response.name %>
-<%= response.founded %>
-<%= response.venue.name %>
-<%= response.venue.capacity %>
-<%= response.venue.city %>
-<%= response.venue.state %>
-<%= response.conference.name %>
-<% if (response.coaches.length) { %>
-    <% response.coaches.forEach(function(id) { %>
-    <br>
-    <%= id.full_name %>
-    <%= id.experience %>
-    <% })}; %>
+
 
 <% if (response.players.length) { %>
     <% response.players.forEach(function(id) { %>

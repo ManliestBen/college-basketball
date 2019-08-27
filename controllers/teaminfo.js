@@ -16,8 +16,7 @@ function index(req, res) {
 function show(req, res) {
     let { id } =  req.params;
     var apiLink = {
-        url: `
-        https://api.sportradar.us/ncaamb/trial/v4/en/teams/${id}/profile.json?api_key=${process.env.NCAAMB_TOKEN}`
+        url:`https://api.sportradar.us/ncaamb/trial/v4/en/seasons/2018/REG/teams/${id}/statistics.json?api_key=${process.env.NCAAMB_TOKEN}`
     }
     axios.get(apiLink.url)
     .then(result => {
