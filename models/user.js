@@ -12,10 +12,11 @@ var favePlayerSchema = new mongoose.Schema({
 
 var userSchema = new mongoose.Schema({
     name: {type: String},
+    alias: {type: String, default: "Alias"},
     email: {type: String},
     googleId: {type: String},
     faveteams: [faveTeamSchema],
-    faveplayers: [favePlayerSchema]
+    faveplayers: [favePlayerSchema],
     
 }, {
     timestamps: true

@@ -4,17 +4,20 @@
 <div id="memberheader">
 Member List:
 </div>
-<div>
+
 <ul id="memberlist">
 <% users.forEach(function(user) { %>
+<br>
 <%= user.name %>
-<a id="userprofilelink" href="/users/<%= user._id %>">User Profile</a>
+<div id="spacer">
+Alias: <%= user.alias %>
+</div>
+<a id="userprofilelink" href="/users/<%= user._id %>">User Page</a>
 
 <br>
 <% }); %>
 </ul>
 
-</div>
 
 
 <%- include('../partials/footer') %>
