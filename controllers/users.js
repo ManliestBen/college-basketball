@@ -44,7 +44,14 @@ function updateInfo(req, res) {
 }
 
 function changeInfo(req, res){
-    
-}
-    
 
+    User.findById(req.params.id, function(err, user) {
+        if (err) throw err;
+        user.alias = req.body.alias;
+        user.save(function(err) {
+            res.redirect(`/users/${user._id}`);
+        });
+    });
+}
+
+ 

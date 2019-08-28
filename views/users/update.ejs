@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <br><br><br>
-<form>
+<form action="/users/<%= user._id %>/update?_method=PUT" method="POST">
 <div id="userinfopage">
 User Name:
 <%= user.name %>

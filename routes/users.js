@@ -6,7 +6,8 @@ var request = require('request');
 router.get('/users', usersCtrl.index);
 router.get('/users/faveteams', usersCtrl.newTeam);
 router.get('/users/:id', usersCtrl.show);
-router.get('/users/:id/update', usersCtrl.updateInfo)
+router.get('/users/:id/update', usersCtrl.updateInfo);
+router.put('/users/:id/update', usersCtrl.changeInfo)
 
 
 
