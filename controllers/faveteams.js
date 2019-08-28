@@ -28,6 +28,7 @@ function createPlayer(req, res) {
 }
 
 function deleteTeam(req, res) {
+ console.log(req.params.teamid)
     User.findById(req.params.id, function(err, user) {
          user.faveteams.splice(req.params.teamid, 1);
          user.save(function(err) {
@@ -46,19 +47,4 @@ function deletePlayer(req, res) {
 }
 
 
-
-// function deleteTeam (req, res) {
-//     var temp_id = new mongoose.mongo.ObjectID(req.params.teamid)
-//     User.findByIdAndDelete(temp_id, (error, data)=>{
-//         if(error){
-//             console.log("Could not delete");
-//             throw error;
-//         } else {
-//             console.log(req.params.id);
-//             console.log(req.params.teamid);
-//             console.log("Deletion complete", data);
-//             res.status(204);
-//         }
-//     });
-// };
 
