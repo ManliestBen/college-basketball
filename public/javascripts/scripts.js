@@ -1,9 +1,9 @@
 var teamsByConference = {
-    A: ["Select Below", "BC", "CLEM", "DUKE", "FSU", "GT", "LOU", "MIA", "UNC", "NCST", "PITT", "SYR", "UVA", "VT", "WAKE"],
-    B: ["Select Below", "ILL", "IND", "IOWA", "MD", "MICH", "MSU", "MINN", "NEB", "NW", "OSU", "PSU", "PUR", "RUTG", "WIS"],
-    C: ["Select Below", "BAY", "ISU", "KU", "KSU", "OKLA", "OKST", "TCU", "TEX", "TTU", "WVU"],
-    D: ["Select Below", "ARIZ", "ASU", "CAL", "UCLA", "COLO", "ORE", "ORST", "USC", "STAN", "UTAH", "WASH", "WSU"],
-    E: ["Select Below", "ALA", "ARK", "AUB", "FLA", "UGA", "UK", "LSU", "MISS", "MSST", "MIZZ", "SCAR", "TENN", "TXAM", "VAN"]
+    A: ["Select Below", "Boston College", "Clemson", "Duke", "Florida State", "Georgia Tech", "Louisiana", "Miami", "North Carolina", "North Carolina State", "Pittsburgh", "Syracuse", "Virginia", "Virginia Tech", "Wake Forest"],
+    B: ["Select Below", "Illinois", "Indiana", "Iowa", "Maryland", "Michigan", "Michigan State", "Minnesota", "Nebraska", "Northwestern", "Oklahoma State", "Penn State", "Purdue", "Rutgers", "Wisconsin"],
+    C: ["Select Below", "Baylor", "Iowa State", "Kansas", "Kansas State", "Oklahoma", "Oklahoma State", "TCU", "Texas", "Texas Tech", "West Virginia"],
+    D: ["Select Below", "Arizona", "Arizona State", "California", "UCLA", "Colorado", "Oregon", "Oregon State", "USC", "Stanford", "Utah", "Washington", "Washington State"],
+    E: ["Select Below", "Alabama", "Arkansas", "Auburn", "Florida", "Georgia", "Kentucky", "Louisiana State", "Mississippi", "Mississippi State", "Missouri", "South Carolina", "Tennessee", "Texas A&M", "Vanderbilt"]
     }
    
     
