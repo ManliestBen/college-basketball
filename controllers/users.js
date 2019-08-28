@@ -4,7 +4,8 @@ module.exports = {
     index,
     newTeam,
     show,
-    updateInfo
+    updateInfo,
+    changeInfo
 };
 
 
@@ -40,6 +41,10 @@ function updateInfo(req, res) {
     User.findById(req.params.id, function(err, users) {
         res.render('users/update', {user:req.user, users});
     })
+}
+
+function changeInfo(req, res){
+    
 }
     
 

@@ -37,13 +37,12 @@ function deleteTeam(req, res) {
 }
 
 function deletePlayer(req, res) {
-    console.log(req.params.playerid)
-    // User.findById(req.params.id, function(err, user) {
-    //      user.faveplayers.splice(req.params.playerid, 1);
-    //      user.save(function(err) {
-    //          res.redirect(`/users/${user._id}`);
-    //      });
-    //  });
+    User.findById(req.params.id, function(err, user) {
+         user.faveplayers.splice(req.params.playerid, 1);
+         user.save(function(err) {
+             res.redirect(`/users/${user._id}`);
+         });
+     });
 }
 
 
