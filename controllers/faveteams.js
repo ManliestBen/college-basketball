@@ -1,4 +1,5 @@
 var User = require('../models/user');
+var mongoose = require('mongoose');
 
 module.exports = {
     createTeam,
@@ -25,6 +26,30 @@ function createPlayer(req, res) {
     });
 }
 
-function deleteTeam (req, res) {
-    //TODO : find the user record that you want to remove the team from remove the tema from that users favteams array with splice or any corresponing mongoose method 
+function deleteTeam(req, res) {
+    console.log(req.params.teamid)
+    User.findById(req.params.id, function(err, user) {
+        user.faveteams.splice(req.body, 1);
+        user.save(function(err) {
+            res.redirect(`/users/${user._id}`);
+        });
+    });
 }
+
+
+
+// function deleteTeam (req, res) {
+//     var temp_id = new mongoose.mongo.ObjectID(req.params.teamid)
+//     User.findByIdAndDelete(temp_id, (error, data)=>{
+//         if(error){
+//             console.log("Could not delete");
+//             throw error;
+//         } else {
+//             console.log(req.params.id);
+//             console.log(req.params.teamid);
+//             console.log("Deletion complete", data);
+//             res.status(204);
+//         }
+//     });
+// };
+

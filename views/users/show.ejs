@@ -7,9 +7,9 @@
 <br>
 
 <%= x.faveteams %>
-// TODO : SET UP A ROUTE IT NEEDS TO BE A DELETE ROUTE
-<form action="/<%= idx %>?_method=DELETE" method="DELETE" class="delete-form">
-              <button type="submit">X</button>
+
+<form action="/users/<%= user._id %>/faveteams/<%= x._id %>" method="POST">
+              <button type="submit">X</button></form>
 
 <a href="/teaminfo/<%= x.teamId %>">View Team</a>
 

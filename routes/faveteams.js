@@ -5,5 +5,5 @@ var favesCtrl = require('../controllers/faveteams');
 
 router.post('/users/:id/faveteams', favesCtrl.createTeam);
 router.post('/users/:id/faveplayers', favesCtrl.createPlayer);
-router.delete('/users/:userid/team/:teamid', favesCtrl.deleteTeam)
+router.post('/users/:id/faveteams/:teamid', favesCtrl.deleteTeam)
 module.exports = router;
