@@ -87,3 +87,16 @@ div {
 #spacer {
   margin-left: 20px;
 }
+
+#myinfolink {
+  margin-right: 20px;
+}
+
+#userinfopage {
+  font-size: 25px;
+  margin-left: 30px;
+}
+
+#updatealias {
+  text-align: center;
+}

@@ -21,6 +21,7 @@
       <div class="nav-wrapper">
         <a href="/users" id= "pagetitle" class="left">College Basketball</a>
         <% if (user) { %>
+          <a id="myinfolink" href="/users/<%= user._id %>/update">My Info</a>
           <a href="/users/<%= user._id %>">My Teams</a>
         <% } %>
         <ul class="right">

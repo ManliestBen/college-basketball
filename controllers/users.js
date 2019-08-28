@@ -3,9 +3,8 @@ var request = require('request');
 module.exports = {
     index,
     newTeam,
-    show
-    // createTeam
-
+    show,
+    updateInfo
 };
 
 
@@ -35,7 +34,12 @@ res.render('users/index', { users, user:req.user, name: req.query.name, sortKey 
 function newTeam(req, res) {
     console.log(req.user.id);
     res.render('users/faveteams', {user:req.user, teamData: ['']});
-
 }
 
+function updateInfo(req, res) {
+    User.findById(req.params.id, function(err, users) {
+        res.render('users/update', {user:req.user, users});
+    })
+}
+    
 
