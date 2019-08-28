@@ -1,6 +1,6 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -10,8 +10,9 @@ a {
 nav {
   background-color: rgb(30, 88, 247);
   font-size: 27px;
-  padding: 5px;
-text-align: center;
+  padding: 0px;
+  text-align: right;
+  margin-left: 0px;
 
 }
 
@@ -27,3 +28,36 @@ select {
   display: none;
 }
 
+form {
+  font-size: 20px;
+  padding-left: 30px;
+}
+
+#pagetitle {
+  margin-left: 30px;
+}
+
+div {
+  padding-left: 0px;
+}
+
+#faveteams, #teamlist {
+  width: 300px;
+}
+
+#addteam {
+  margin-top: 15px;
+  margin-bottom: 50px;
+ 
+}
+.headerlines {
+  margin-left: 20px;
+}
+
+#deleteteam, #deleteplayer{
+  margin-right: 20px;
+}
+
+.statlink {
+  padding-left: 15px;
+}

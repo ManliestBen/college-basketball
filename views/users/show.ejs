@@ -1,28 +1,30 @@
 <%- include('../partials/header') %>
-
+<br><br>
 <div>
-<h2>My Teams:</h2>
+<h2 class="headerlines">My Teams:</h2>
+<br>
 <% if (users.faveteams.length) { %>
     <% users.faveteams.forEach(function(x, idx) { %>
         <form action="/users/<%= user._id %>/faveteams/<%= idx %>" method="POST">
-<br>
-<br>
-<button type="submit">X</button>
-<%= x.faveteams %>
-
-
-<a href="/teaminfo/<%= x.teamId %>">View Team</a>
-
+            <button id="deleteteam" class="btn btn-outline-danger" type="submit">X</button>
+            
+            <%= x.faveteams %>
+            
+            
+            <a class="statlink" href="/teaminfo/<%= x.teamId %>">View Team</a>
+            
+            <br>
+            <br>
 
 <% })}; %>
 </form>
 
 </div>
-<br><br>
+<br>
 <form action="/users/<%= user._id %>/faveteams" method="POST">
 
 <select name="teamlist" id="teamlist" onChange="changeconf(this.value);">
-<option value="" disabled selected>Select</option>
+<option value="" disabled selected>Select Conference</option>
 <option value="A">ACC</option>
 <option value="B">Big Ten</option>
 <option value="C">Big 12</option>
@@ -30,28 +32,29 @@
 <option value="E">SEC</option>
 </select>
 
+<br>
 
 <select name="faveteams" id="faveteams" onChange="changeid(this.value);">
-<option value="" disabled selected>Select Conference</option>
-</select>
-
-<select name="teamId" id="teamId">
 <option value="" disabled selected>Select Team</option>
 </select>
+<select name="teamId" id="teamId">
+<option value="" disabled selected></option>
+</select>
 
-
-<button class="btn btn-success" type="submit">Add Team</button>
+<div class="container">
+<button id="addteam" class="btn btn-outline-success" type="submit">Add Team</button>
+</div>
 </form>
 <div>
-<h2>My Players:</h2>
+<h2 class="headerlines">My Players:</h2>
 <% if (users.faveplayers.length) { %>
 <% users.faveplayers.forEach(function(x, idx) { %>
     <form action="/users/<%= user._id %>/faveplayers/<%= idx %>" method="POST">
 <br>
-<button type="submit">X</button>
+<button id="deleteplayer" class="btn btn-outline-danger" type="submit">X</button>
 <%= x.faveplayers %>
 
-<a href="/playerinfo/<%= x.playerId %>">View Player</a>
+<a class= "statlink" href="/playerinfo/<%= x.playerId %>">View Player</a>
 
 </form>
 <% })}; %>
