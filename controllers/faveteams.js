@@ -27,13 +27,12 @@ function createPlayer(req, res) {
 }
 
 function deleteTeam(req, res) {
-    console.log(req.params.teamid)
     User.findById(req.params.id, function(err, user) {
-        user.faveteams.splice(req.body, 1);
-        user.save(function(err) {
-            res.redirect(`/users/${user._id}`);
-        });
-    });
+         user.faveteams.splice(req.params.teamid, 1);
+         user.save(function(err) {
+             res.redirect(`/users/${user._id}`);
+         });
+     });
 }
 
 
