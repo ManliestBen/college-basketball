@@ -6,7 +6,7 @@
     <% users.faveteams.forEach(function(x, idx) { %>
         <form action="/users/<%= user._id %>/faveteams/<%= idx %>" method="POST">
 <br>
-
+<br>
 <button type="submit">X</button>
 <%= x.faveteams %>
 
@@ -18,7 +18,7 @@
 </form>
 
 </div>
-
+<br><br>
 <form action="/users/<%= user._id %>/faveteams" method="POST">
 
 <select name="teamlist" id="teamlist" onChange="changeconf(this.value);">
@@ -45,13 +45,15 @@
 <div>
 <h2>My Players:</h2>
 <% if (users.faveplayers.length) { %>
-<% users.faveplayers.forEach(function(x) { %>
+<% users.faveplayers.forEach(function(x, idx) { %>
+    <form action="/users/<%= user._id %>/faveplayers/<%= idx %>" method="POST">
 <br>
-
+<button type="submit">X</button>
 <%= x.faveplayers %>
 
 <a href="/playerinfo/<%= x.playerId %>">View Player</a>
 
+</form>
 <% })}; %>
 
 </div>
