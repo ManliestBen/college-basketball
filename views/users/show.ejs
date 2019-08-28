@@ -7,8 +7,12 @@
 <br>
 
 <%= x.faveteams %>
+// TODO : SET UP A ROUTE IT NEEDS TO BE A DELETE ROUTE
+<form action="/<%= idx %>?_method=DELETE" method="DELETE" class="delete-form">
+              <button type="submit">X</button>
 
 <a href="/teaminfo/<%= x.teamId %>">View Team</a>
+
 
 <% })}; %>
 

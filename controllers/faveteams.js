@@ -2,7 +2,9 @@ var User = require('../models/user');
 
 module.exports = {
     createTeam,
-    createPlayer
+    createPlayer,
+    deleteTeam
+
 }
 
 function createTeam(req, res) {
@@ -21,4 +23,8 @@ function createPlayer(req, res) {
             res.redirect(`/users/${user._id}`);
         });
     });
+}
+
+function deleteTeam (req, res) {
+    //TODO : find the user record that you want to remove the team from remove the tema from that users favteams array with splice or any corresponing mongoose method 
 }
