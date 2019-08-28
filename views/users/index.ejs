@@ -1,12 +1,14 @@
 <%- include('../partials/header') %>
 
 
+<div id="memberheader">
+Member List:
+</div>
 <div>
-List of users:
-<ul>
+<ul id="memberlist">
 <% users.forEach(function(user) { %>
 <%= user.name %>
-<a href="/users/<%= user._id %>">Show</a>
+<a id="userprofilelink" href="/users/<%= user._id %>">User Profile</a>
 
 <br>
 <% }); %>

@@ -16,9 +16,6 @@ function show(req, res) {
 }
     
 
-
-
-
 function index(req, res, next) {
 
 // Make the query object to use with User.find based up
@@ -42,11 +39,3 @@ function newTeam(req, res) {
 }
 
 
-
-// function createTeam(req, res) {
-//     var team = new User(req.body);
-//     team.save(function(err) {
-//         if (err) return res.redirect('/users/newteam');
-//         res.redirect('/users');
-//     })
-// }
