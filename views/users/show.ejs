@@ -3,18 +3,19 @@
 <div>
 <h2>My Teams:</h2>
 <% if (users.faveteams.length) { %>
-<% users.faveteams.forEach(function(x, idx) { %>
+    <% users.faveteams.forEach(function(x, idx) { %>
+        <form action="/users/<%= user._id %>/faveteams/<%= idx %>" method="POST">
 <br>
 
+<button type="submit">X</button>
 <%= x.faveteams %>
 
-<form action="/users/<%= user._id %>/faveteams/<%= idx %>" method="POST">
-              <button type="submit">X</button></form>
 
 <a href="/teaminfo/<%= x.teamId %>">View Team</a>
 
 
 <% })}; %>
+</form>
 
 </div>
 
