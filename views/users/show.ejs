@@ -8,8 +8,10 @@
 <% if (users.faveteams.length) { %>
     <% users.faveteams.forEach(function(x, idx) { %>
         <form action="/users/<%= user._id %>/faveteams/<%= idx %>" method="POST">
+            <% console.log(user.id) %>
+            <% if (user._id) { %>
             <button id="deleteteam" class="btn btn-outline-danger" type="submit">X</button>
-            
+            <% } %>
             <%= x.faveteams %>
             
             

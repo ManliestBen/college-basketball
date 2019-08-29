@@ -34,7 +34,7 @@ res.render('users/index', { users, user:req.user, name: req.query.name, sortKey 
 
 function newTeam(req, res) {
     console.log(req.user.id);
-    res.render('users/faveteams', {user:req.user, teamData: ['']});
+    res.render('users/faveteams', {user:req.user_id });
 }
 
 function updateInfo(req, res) {

@@ -3,7 +3,13 @@ var teamInfoCtrl = require('../controllers/teaminfo');
 var request = require('request');
 var passport = require('passport');
 
-router.get('/teaminfo/:id', teamInfoCtrl.show);
-router.get('/playerinfo/:id', teamInfoCtrl.showPlayer);
+router.get('/teaminfo/:id', isLoggedIn, teamInfoCtrl.show);
+router.get('/playerinfo/:id', isLoggedIn, teamInfoCtrl.showPlayer);
+
+
+function isLoggedIn(req, res, next) {
+    if ( req.isAuthenticated() ) return next();
+    res.redirect('/auth/google');
+  }
 
 module.exports = router;

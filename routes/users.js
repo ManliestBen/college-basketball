@@ -3,11 +3,11 @@ var usersCtrl = require('../controllers/users');
 var request = require('request');
 
 
-router.get('/users', usersCtrl.index);
-router.get('/users/faveteams', usersCtrl.newTeam);
-router.get('/users/:id', usersCtrl.show);
-router.get('/users/:id/update', usersCtrl.updateInfo);
-router.put('/users/:id/update', usersCtrl.changeInfo)
+router.get('/users', isLoggedIn, usersCtrl.index);
+router.get('/users/faveteams', isLoggedIn, usersCtrl.newTeam);
+router.get('/users/:id', isLoggedIn, usersCtrl.show);
+router.get('/users/:id/update', isLoggedIn, usersCtrl.updateInfo);
+router.put('/users/:id/update', isLoggedIn, usersCtrl.changeInfo)
 
 
 
