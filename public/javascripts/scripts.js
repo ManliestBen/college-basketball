@@ -94,3 +94,25 @@ var teamsById = {
         document.getElementById("teamId").innerHTML = catOptions;
         }
         }
+
+function getPic(){
+        fetch("https://contextualwebsearch-websearch-v1.p.rapidapi.com/api/Search/ImageSearchAPI?autoCorrect=false&pageNumber=1&pageSize=1&q=Taylor%20Swift&safeSearch=false", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "contextualwebsearch-websearch-v1.p.rapidapi.com",
+		"x-rapidapi-key": "cffa55f1e4mshf017575a2abddd4p1a360ajsnf8cb590c48d8"
+	}
+})
+.then(response => {
+	console.log(response);
+})
+.catch(err => {
+	console.log(err);
+});
+}
+
+
+
+function confettiToggle() {
+        confetti.toggle();
+}

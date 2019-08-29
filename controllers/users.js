@@ -5,7 +5,8 @@ module.exports = {
     newTeam,
     show,
     updateInfo,
-    changeInfo
+    changeInfo,
+
 };
 
 
@@ -54,4 +55,3 @@ function changeInfo(req, res){
     });
 }
 
- 
