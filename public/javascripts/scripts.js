@@ -1,3 +1,6 @@
+const yaaaaay = new Audio('audio/yay.mp3');
+const aww = new Audio('audio/aww.wav')
+
 var teamsByConference = {
     A: ["Select Below", "Boston College", "Clemson", "Duke", "Florida State", "Georgia Tech", "Louisville", "Miami", "North Carolina", "North Carolina State", "Pittsburgh", "Syracuse", "Virginia", "Virginia Tech", "Wake Forest"],
     B: ["Select Below", "Illinois", "Indiana", "Iowa", "Maryland", "Michigan", "Michigan State", "Minnesota", "Nebraska", "Northwestern", "Ohio State", "Penn State", "Purdue", "Rutgers", "Wisconsin"],
@@ -115,4 +118,8 @@ function getPic(){
 
 function confettiToggle() {
         confetti.toggle();
+        if (confetti.isRunning() == true){
+        setTimeout(function(){yaaaaay.play();},500)} 
+        if (confetti.isRunning() == false){
+        setTimeout(function(){aww.play();},500);}
 }
