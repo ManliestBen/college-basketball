@@ -1,0 +1,72 @@
+<%- include('../partials/header') %>
+<br><br>
+
+<div id="usertitlepage">Favorites Page</div>
+<div>
+<h2 class="headerlines">Favorite Teams:</h2>
+<br>
+<% if (users.faveteams.length) { %>
+    <% users.faveteams.forEach(function(x, idx) { %>
+        <form action="/users/<%= user._id %>/faveteams/<%= idx %>" method="POST">
+            <% console.log(user.id) %>
+            <% if (user._id) { %>
+            <button id="deleteteam" class="btn btn-outline-light" type="submit">X</button>
+            <% } %>
+            <%= x.faveteams %>
+            
+            
+            <a class="statlink" href="/teaminfo/<%= x.teamId %>">View Team</a>
+            
+            <br>
+            <br>
+
+            </form>
+<% })}; %>
+
+</div>
+<br>
+<form action="/users/<%= user._id %>/faveteams" method="POST">
+
+<select name="teamlist" id="teamlist" onChange="changeconf(this.value);">
+<option value="" disabled selected>Select Conference</option>
+<option value="A">ACC</option>
+<option value="B">Big Ten</option>
+<option value="C">Big 12</option>
+<option value="D">Pac 12</option>
+<option value="E">SEC</option>
+</select>
+
+<br>
+
+<select name="faveteams" id="faveteams" onChange="changeid(this.value);">
+<option value="" disabled selected>Select Team</option>
+</select>
+<select name="teamId" id="teamId">
+<option value="" disabled selected></option>
+</select>
+
+<div class="container">
+<button id="addteam" class="btn btn-outline-light" type="submit">Add Team</button>
+</div>
+</form>
+<div>
+<h2 class="headerlines">Favorite Players:</h2>
+<% if (users.faveplayers.length) { %>
+<% users.faveplayers.forEach(function(x, idx) { %>
+    <form action="/users/<%= user._id %>/faveplayers/<%= idx %>" method="POST">
+<br>
+<button id="deleteplayer" class="btn btn-outline-light" type="submit">X</button>
+<%= x.faveplayers %>
+
+<a class= "statlink" href="/playerinfo/<%= x.playerId %>">View Player</a>
+
+</form>
+<% })}; %>
+
+</div>
+
+
+
+
+
+<%- include('../partials/footer') %>

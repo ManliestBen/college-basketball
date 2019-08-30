@@ -8,9 +8,13 @@
 <h6>Position: <%= response.position %></h6><br>
 <h6>Jersey Number: <%= response.jersey_number %></h6>
 <h6>Year: <%= response.experience %></h6>
+<br><br>
 
-
-
+<select id="playerIdSubmit" name="playerId"><option value="<%= response.id %>"><%= response.id %></option></select>
+<select id="faveplayersSubmit" name="faveplayers"><option value="<%= response.full_name %>"><%= response.full_name %></option></select>
+<input type='submit' value='Add Player to Favorites'>
+<br>
+<br>
 <% response.seasons.forEach(function(id) { %>
     <h3><%= id.year %> Season Stats:</h3>
     <table>
@@ -153,9 +157,8 @@
 
 
 <br>
-<select id="playerIdSubmit" name="playerId"><option value="<%= response.id %>"><%= response.id %></option></select>
-<select id="faveplayersSubmit" name="faveplayers"><option value="<%= response.full_name %>"><%= response.full_name %></option></select>
-<input type='submit' value='Add Player to Favorites'>
+
+
 </form>
 
 <%- include('../partials/footer') %>
