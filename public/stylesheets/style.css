@@ -105,3 +105,41 @@ div {
   margin-right: 30px;
 }
 
+#container {
+  position: relative;
+}
+canvas {
+  position: absolute;
+}
+
+table {
+  position: relative;
+}
+
+select {
+  position: relative;
+}
+
+.btn {
+  position: relative;
+  color: white;
+  background-color: white;
+
+}
+
+input {
+  position: relative;
+}
+
+h1, h2, ul, nav, a {
+  position: relative;
+}
+
+canvas {
+  position: absolute;
+  display:block;
+}
+
+#rainLink {
+  margin-right: 30px;
+}

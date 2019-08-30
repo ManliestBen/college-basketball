@@ -21,8 +21,9 @@
       <div class="nav-wrapper">
         <a href="/users" id= "pagetitle" class="left">College Basketball</a>
         <% if (user) { %>
+          <a id="rainLink" onclick="rainToggle()">Make it RAIN!</a>
           <a id="confettiLink" onclick="confettiToggle()">Confetti Mode</a>
-          <a id="myinfolink" href="/users/<%= user._id %>/update">My Info</a>
+          <a id="myinfolink" href="/users/<%= user._id %>/update">My Profile</a>
           <a href="/users/<%= user._id %>">My Teams</a>
         <% } %>
         <ul class="right">
@@ -39,4 +40,5 @@
 
   </div>
 <main>
+    <canvas id="particleCanvas"></canvas>
 <h1></h1>
