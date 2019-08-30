@@ -317,5 +317,5 @@ function rave() {
                 canvaslink.setAttribute("id", "c");
                 csslink.setAttribute("href", "/stylesheets/stylecolor.css"); 
                 jslink.setAttribute("src", "/javascripts/scriptscolor.js"); 
-              
+                loadScript('/javascripts/scriptscolor.js');
         }
