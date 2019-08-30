@@ -252,7 +252,7 @@ window.addEventListener('load', function() {
 
 function rainToggle() {
         if (rainStrength == 0 ){
-                console.log('taco');
+             
                 rainStrength = 5;
                 setTimeout(function(){rain.play();},500);
         } else {
@@ -261,4 +261,35 @@ function rainToggle() {
                 setTimeout(function(){rain.pause();},500);
         }
 }}
+var originalHtml = document.body;
+var rave_is_on = 0;
 
+function rave() {
+        var elements = document.getElementsByTagName('*');
+        
+        rave_is_on = 1;
+        for (var i = elements.length - 1; i >= 0; i--) { 
+          var r = Math.floor(Math.random()*256);
+          var g = Math.floor(Math.random()*256);
+          var b = Math.floor(Math.random()*256); 
+          elements[i].style.color = '#'+r.toString(16)+g.toString(16)+b.toString(16);
+          
+          var r = Math.floor(Math.random()*256);
+          var g = Math.floor(Math.random()*256);
+          var b = Math.floor(Math.random()*256);
+          elements[i].style.backgroundColor = '#'+r.toString(16)+g.toString(16)+b.toString(16);
+        };
+        
+        setTimeout(rave, 100);
+        };
+
+     function raveToggle() {
+             if (rave_is_on == 0 ){
+                     console.log('rave is on')
+                     rave();
+                     // setTimeout(function(){rave.play();},500);
+                } else {
+                        document.location.reload(true);
+                        // setTimeout(function(){rave.pause();},500);
+                }
+        }
