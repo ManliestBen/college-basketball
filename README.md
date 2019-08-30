@@ -46,5 +46,9 @@
 - AAU, I should be able to challenge other users to 'fantasy'-type game based on game data for weekly periods.
 - AAU, I should see a list of upcoming games on my calendar.
 - ~~AAU, I should be able to see other user's favorite teams/players.~~
+- AAU, I should be able to search for any NCAA team.
+- AAU, I should be able to see a picture on the player profile page.
+- AAU, I should be able to see a team logo on the team profile page.
+- AAU, I should be able to delete my teams/players and not other user's teams/players.
 
 
