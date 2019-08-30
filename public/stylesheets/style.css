@@ -151,3 +151,7 @@ canvas {
 #colorsLink {
   margin-right: 30px;
 }
+
+#updatealias {
+  position: relative;
+}
