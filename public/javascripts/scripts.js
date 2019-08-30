@@ -1,7 +1,7 @@
 const yaaaaay = new Audio('/audio/yay.mp3');
 const aww = new Audio('/audio/aww.wav');
 const rain = new Audio('/audio/rain.mp3');
-const rave = new Audio('/audio/rave.mp3');
+const ravesound = new Audio('/audio/rave.mp3');
 const bird = new Audio('/audio/bird.mp3');
 
 var teamsByConference = {
@@ -256,12 +256,12 @@ function rainToggle() {
         if (rainStrength == 0 ){
              
                 rainStrength = 5;
-                setTimeout(function(){rain.play();},500);
+                setTimeout(function(){rain.play();},100);
         } else {
         if (rainStrength == 5 ){
                 rainStrength = 0;
                 setTimeout(function(){rain.pause();},100);
-                setTimeout(function(){bird.play();},500);
+                setTimeout(function(){bird.play();},100);
         }
 }}
 var originalHtml = document.body;
@@ -289,13 +289,14 @@ function rave() {
      function raveToggle() {
              if (rave_is_on == 0 ){
                      console.log('rave is on')
-                     setTimeout(function(){rave.play();},200);
+                     setTimeout(function(){ravesound.play();},100);
                      rave_is_on = 1;
+                     rave();
                      rave();
                      // setTimeout(function(){rave.play();},500);
                 } else {
                         rave_is_on = 0;
                         document.location.reload(true);
-                        setTimeout(function(){rave.pause();},100);
+                        setTimeout(function(){ravesound.pause();},100);
                 }
         }
