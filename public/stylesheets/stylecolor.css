@@ -9,7 +9,7 @@ a {
 
 nav {
   background-color: rgb(30, 88, 247);
-  font-size: 27px;
+  font-size: 20px;
   padding: 0px;
   text-align: right;
   margin-left: 0px;
@@ -143,3 +143,13 @@ h1, h2, ul {
   position: relative;
 }
 
+#rainLink {
+  margin-right: 30px;
+}
+
+#raveLink {
+  margin-right: 30px;
+}
+#colorsLink {
+  margin-right: 30px;
+}

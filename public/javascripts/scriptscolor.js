@@ -1,5 +1,3 @@
-const yaaaaay = new Audio('/audio/yay.mp3');
-const aww = new Audio('/audio/aww.wav')
 
 var teamsByConference = {
     A: ["Select Below", "Boston College", "Clemson", "Duke", "Florida State", "Georgia Tech", "Louisville", "Miami", "North Carolina", "North Carolina State", "Pittsburgh", "Syracuse", "Virginia", "Virginia Tech", "Wake Forest"],
@@ -133,7 +131,7 @@ var animations = [];
 var circles = [];
 
 var colorPicker = (function() {
-  var colors = ["#FF6138", "#FFBE53", "#2980B9", "#282741"];
+  var colors = ["#FF6138", "#FFBE53", "#70c405", "#282741"];
   var index = 0;
   function next() {
     index = index++ < colors.length-1 ? index : 0;

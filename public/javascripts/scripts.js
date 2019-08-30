@@ -300,3 +300,21 @@ function rave() {
                         setTimeout(function(){ravesound.pause();},100);
                 }
         }
+        var csslink, jslink;
+        csslink = document.getElementById("csslink"); //Fetch the link by its ID
+        jslink = document.getElementById("jslink"); //Fetch the link by its ID
+        canvaslink = document.getElementById("particleCanvas");
+        function swapMode(){
+                function loadScript(src){
+                        var el = document.createElement("script");
+                        el.src = src;
+                        document.body.appendChild(el);
+                    }// document.getElementById("MyElement").classList.add('MyClass');
+
+                // document.getElementById("MyElement").classList.remove('MyClass');
+                canvaslink.setAttribute("id", "c");
+                csslink.setAttribute("href", "/stylesheets/stylecolor.css"); //Change its href attribute
+                jslink.setAttribute("src", "/javascripts/scriptscolor.js"); //Change its href attribute
+                loadScript("/javascripts/scriptscolor.js");
+                // document.location.reload(true);
+        }
