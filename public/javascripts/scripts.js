@@ -295,16 +295,15 @@ function rave() {
                      rave_is_on = 1;
                      rave();
                      rave();
-                     // setTimeout(function(){rave.play();},500);
-                } else {
+             } else {
                         rave_is_on = 0;
                         document.location.reload(true);
                         setTimeout(function(){ravesound.pause();},100);
                 }
         }
         var csslink, jslink;
-        csslink = document.getElementById("csslink"); //Fetch the link by its ID
-        jslink = document.getElementById("jslink"); //Fetch the link by its ID
+        csslink = document.getElementById("csslink");
+        jslink = document.getElementById("jslink");
         canvaslink = document.getElementById("particleCanvas");
         
         
@@ -313,13 +312,10 @@ function rave() {
                         var el = document.createElement("script");
                         el.src = src;
                         document.body.appendChild(el);
-                    }// document.getElementById("MyElement").classList.add('MyClass');
-
-                // document.getElementById("MyElement").classList.remove('MyClass');
+                    }
                 setTimeout(function(){colorsound.play();},100);
                 canvaslink.setAttribute("id", "c");
-                csslink.setAttribute("href", "/stylesheets/stylecolor.css"); //Change its href attribute
-                jslink.setAttribute("src", "/javascripts/scriptscolor.js"); //Change its href attribute
-                loadScript("/javascripts/scriptscolor.js");
-                // document.location.reload(true);
+                csslink.setAttribute("href", "/stylesheets/stylecolor.css"); 
+                jslink.setAttribute("src", "/javascripts/scriptscolor.js"); 
+              
         }
