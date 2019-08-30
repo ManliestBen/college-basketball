@@ -3,6 +3,8 @@ const aww = new Audio('/audio/aww.wav');
 const rain = new Audio('/audio/rain.mp3');
 const ravesound = new Audio('/audio/rave.mp3');
 const bird = new Audio('/audio/bird.mp3');
+const colorsound = new Audio('/audio/colors.mp3');
+const pinch = new Audio('/audio/pinch.mp3');
 
 var teamsByConference = {
     A: ["Select Below", "Boston College", "Clemson", "Duke", "Florida State", "Georgia Tech", "Louisville", "Miami", "North Carolina", "North Carolina State", "Pittsburgh", "Syracuse", "Virginia", "Virginia Tech", "Wake Forest"],
@@ -304,6 +306,8 @@ function rave() {
         csslink = document.getElementById("csslink"); //Fetch the link by its ID
         jslink = document.getElementById("jslink"); //Fetch the link by its ID
         canvaslink = document.getElementById("particleCanvas");
+        
+        
         function swapMode(){
                 function loadScript(src){
                         var el = document.createElement("script");
@@ -312,6 +316,7 @@ function rave() {
                     }// document.getElementById("MyElement").classList.add('MyClass');
 
                 // document.getElementById("MyElement").classList.remove('MyClass');
+                setTimeout(function(){colorsound.play();},100);
                 canvaslink.setAttribute("id", "c");
                 csslink.setAttribute("href", "/stylesheets/stylecolor.css"); //Change its href attribute
                 jslink.setAttribute("src", "/javascripts/scriptscolor.js"); //Change its href attribute

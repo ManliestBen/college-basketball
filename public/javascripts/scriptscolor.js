@@ -172,7 +172,7 @@ function handleEvent(e) {
     var targetR = calcPageFillRadius(e.pageX, e.pageY);
     var rippleSize = Math.min(200, (cW * .4));
     var minCoverDuration = 750;
-    
+    setTimeout(function(){pinch.play();},050);
     var pageFill = new Circle({
       x: e.pageX,
       y: e.pageY,
