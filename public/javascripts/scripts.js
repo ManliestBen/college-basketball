@@ -286,9 +286,11 @@ function rave() {
      function raveToggle() {
              if (rave_is_on == 0 ){
                      console.log('rave is on')
+                     rave_is_on = 1;
                      rave();
                      // setTimeout(function(){rave.play();},500);
                 } else {
+                        rave_is_on = 0;
                         document.location.reload(true);
                         // setTimeout(function(){rave.pause();},500);
                 }
