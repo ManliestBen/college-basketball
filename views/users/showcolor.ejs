@@ -51,22 +51,15 @@
 </form>
 <div>
 <h2 class="headerlines">Favorite Players:</h2>
-<% if (users.faveplayers.length) { %>
-<% users.faveplayers.forEach(function(x, idx) { %>
-    <form action="/users/<%= user._id %>/faveplayers/<%= idx %>" method="POST">
-<br>
-<button id="deleteplayer" class="btn btn-outline-light" type="submit">X</button>
-<%= x.faveplayers %>
-
-<a class= "statlink" href="/playerinfo/<%= x.playerId %>">View Player</a>
-
-</form>
-<% })}; %>
-
+    <% if (users.faveplayers.length) { %>
+        <% users.faveplayers.forEach(function(x, idx) { %>
+        <form action="/users/<%= user._id %>/faveplayers/<%= idx %>" method="POST">
+        <br>
+        <button id="deleteplayer" class="btn btn-outline-light" type="submit">X</button>
+        <%= x.faveplayers %>
+        <a class= "statlink" href="/playerinfo/<%= x.playerId %>">View Player</a>
+        </form>
+    <% })}; %>
 </div>
-
-
-
-
 
 <%- include('../partials/footer') %>

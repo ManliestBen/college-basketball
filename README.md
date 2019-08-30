@@ -15,6 +15,8 @@
 ![Page model](public/images/wireframe.png)
 ### Here is a diagram showing the ERD for the app:
 ![ERD diagram](public/images/ERD.png)
+### Here is a view of the most current version:
+![Current version](public/images/pageshot.png)
 ## Technology Implemented:
 - JavaScript
 - CSS
@@ -24,6 +26,7 @@
 - MongoDB
 - Node.js
 - Heroku
+- Anime
 
 # User Experience:
 ## User Persona #1:
@@ -42,6 +45,6 @@
 ## Stretch Goals:
 - AAU, I should be able to challenge other users to 'fantasy'-type game based on game data for weekly periods.
 - AAU, I should see a list of upcoming games on my calendar.
-- AAU, I should be able to see other user's favorite teams/players.
+- ~~AAU, I should be able to see other user's favorite teams/players.~~
 
 

@@ -1,21 +1,17 @@
-const TeamInfo = require('../models/teaminfo');
-var request = require('request');
 const axios = require('axios');
-
 
 module.exports = {
     show,
     showPlayer
 };
 
-
-
+// API call for team info
 
 function show(req, res) {
     let { id } =  req.params;
     var apiLink = {
         url:`https://api.sportradar.us/ncaamb/trial/v4/en/seasons/2018/REG/teams/${id}/statistics.json?api_key=${process.env.NCAAMB_TOKEN}`
-    }
+}
     axios.get(apiLink.url)
     .then(result => {
         console.log(result)
@@ -25,10 +21,10 @@ function show(req, res) {
         console.log('requesting data from API', apiLink.url);
         console.log(response)
         res.render('teaminfo/show', {user:req.user, response});
-
     }).catch(error => console.error(error))
 }
 
+// API call for player info
 
 function showPlayer(req, res) {
     let { id } =  req.params;

@@ -17,12 +17,8 @@ var userSchema = new mongoose.Schema({
     googleId: {type: String},
     faveteams: [faveTeamSchema],
     faveplayers: [favePlayerSchema],
-    
 }, {
     timestamps: true
 });
-
-
-
 
 module.exports = mongoose.model('User', userSchema);
